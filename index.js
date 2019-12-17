@@ -193,8 +193,12 @@ function processDuplicateFree( /* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASK
  * @returns an array with all the runners' full names in the following format: "Smith, John".
  * The full names appear in the array in the same order the runners appear in the `runners` array.
  */
-function getFullNames( /* CODE HERE */ ) {
-    /* CODE HERE */
+function getFullNames(runners) {
+    const fullName = [];
+    runners.forEach(function(items) {
+        fullName.push(`${items.last_name}, ${items.first_name}`);
+    });
+    return fullName;
 }
 
 /**
