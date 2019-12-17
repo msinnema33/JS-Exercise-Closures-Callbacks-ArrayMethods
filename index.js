@@ -119,9 +119,11 @@ function processSum(numberList, callback) {
  * [2] Invoking `processProduct` passing 25 and 0 and `(num) => num + 1000`,
  * should return 1000.
  */
-function processProduct( /* CODE HERE */ ) {
-    /* CODE HERE */
+function processProduct(num1, num2, callback) {
+    const prod = num1 * num2;
+    return callback(prod);
 }
+
 
 /**
  * ### Challenge `processContains`
@@ -143,8 +145,11 @@ function processProduct( /* CODE HERE */ ) {
  * "lady gaga" and `['foo', 'bar']` and `(bool) => bool ? 'nice!' : 'sad'`,
  * should return "sad".
  */
-function processContains( /* CODE HERE */ ) {
-    /* CODE HERE */
+function processContains(item, list, callback) {
+    const bool = list.filter(thing => thing === item);
+    if (bool.length > 0) {
+        return callback(true);
+    } else return callback(false);
 }
 
 /**
