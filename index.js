@@ -236,6 +236,11 @@ function firstNamesAllCaps(runners) {
  * The runners in the array appear in the same order they appear in the `runners` array.
  */
 function getRunnersByTShirtSize(runners, tShirtSize) {
+    const newSize = runners.filter(function(item) {
+        return item.newSize === tShirtSize;
+    });
+    return newSize;
+
     /* use filter */
 }
 
@@ -250,7 +255,12 @@ function getRunnersByTShirtSize(runners, tShirtSize) {
  * @returns a number which is the sum of the donations by all runners.
  */
 function tallyUpDonations(runners) {
-    /* use reduce */
+
+    const totalDonations = runners.reduce(function(totalAmount, currentValue) {
+        return totalAmount + currentValue.donation;
+
+    }, 0);
+    return totalDonations;
 }
 
 /////////////// CLOSURES ///////////////
